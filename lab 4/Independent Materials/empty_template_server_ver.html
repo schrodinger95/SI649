@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- required libs for embedding vega charts -->
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+
+<!-- Location to insert the visualization. You can rename the id. -->
+<div id="visualization"></div>
+
+<script type="text/javascript">
+	//assign the location of your chart specification to the variable "json_spec_addr"
+    const json_spec_addr="json/vis1.json";
+	//finding the dom with the id "visualization", and render chart "json_spec_addr" there.
+    vegaEmbed('#visualization', json_spec_addr,{}).then(function(result) {}).catch(console.error);
+	//because you need to load the chart spec (in json),
+	//	the webpage will throw an error if you do not run a server 
+	
+</script>
+</body>
+</html>

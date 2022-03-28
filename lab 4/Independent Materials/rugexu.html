@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+
+<body>
+  <h1>Vis 1</h1>
+  <div id="vis1"></div>
+
+  <h1>Vis 2</h1>
+  <div id="vis2"></div>
+
+  <h1>Vis 3</h1>
+  <div id="vis3"></div>
+
+  <h1>Vis 4</h1>
+  <div id="vis4"></div>
+  <script>
+    const json_spec_addr_1="json/chart1.json";
+    const json_spec_addr_2="json/chart2.json";
+    const json_spec_addr_3="json/chart3.json";
+    const json_spec_addr_4="json/chart4.json";
+
+    vegaEmbed('#vis1', json_spec_addr_1,{}).then(function(result) {}).catch(console.error);
+    vegaEmbed('#vis2', json_spec_addr_2,{}).then(function(result) {}).catch(console.error);
+    vegaEmbed('#vis3', json_spec_addr_3,{}).then(function(result) {}).catch(console.error);
+    vegaEmbed('#vis4', json_spec_addr_4,{}).then(function(result) {}).catch(console.error);
+  </script>
+</body>
+</html>
